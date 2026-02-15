@@ -26,15 +26,30 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+.balloon {
+  position:absolute;
+  top:0;
+  font-size:50px;
+  animation: swing 4s ease-in-out infinite;
+}
+
 .balloon::after {
   content:"";
   position:absolute;
-  top:60px;
+  top:55px;
   left:50%;
   width:2px;
   height:120px;
-  background:white;
-  opacity:0.4;
+  background:rgba(255,255,255,0.4);
+  transform:translateX(-50%);
+}
+
+@keyframes swing {
+  0% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
 }
 
 @keyframes float {
@@ -118,10 +133,11 @@ button:hover {
 <body>
 
 <!-- Balloons -->
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468379.png" style="left:10%;">
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468379.png" style="left:30%; animation-delay:1s;">
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468379.png" style="left:60%; animation-delay:2s;">
-<img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468379.png" style="left:80%; animation-delay:3s;">
+<div class="balloon" style="left:10%;">🎈</div>
+<div class="balloon" style="left:25%; animation-delay:1s;">🎈</div>
+<div class="balloon" style="left:50%; animation-delay:2s;">🎈</div>
+<div class="balloon" style="left:70%; animation-delay:1.5s;">🎈</div>
+<div class="balloon" style="left:85%; animation-delay:0.5s;">🎈</div>
 
 <div class="card">
 
@@ -145,7 +161,7 @@ button:hover {
     <h2>Upgrade Input Required</h2>
 
     <p class="small">
-      If you could upgrade one part of your current setup,
+      If you could upgrade one materialistic thing in life right now,
       what would you choose?
     </p>
 

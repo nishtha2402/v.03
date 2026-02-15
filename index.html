@@ -88,6 +88,7 @@ button:hover {
 
   <div id="auth">
     <div class="sub">Authentication required</div>
+	<div class="sub">Password is the place where we first met? [no caps]</div>
     <input type="password" id="key" placeholder="Enter access key">
     <button onclick="unlock()">Authenticate</button>
   </div>
@@ -111,7 +112,7 @@ button:hover {
 
 <script>
 function unlock(){
-  var correct = "berlin";  // 🔑 CHANGE THIS
+  var correct = "haridwar";  // 🔑 CHANGE THIS
   var input = document.getElementById("key").value.toLowerCase();
 
   if(input === correct){
@@ -132,7 +133,7 @@ function submitAnswer(){
 
   var message = encodeURIComponent("Birthday Upgrade Request:\n\n" + answer);
   
-  window.open("https://wa.me/YOURNUMBER?text=" + message, "_blank");
+  window.open("https://wa.me/491748914676?text=" + message, "_blank");
 }
 </script>
 
